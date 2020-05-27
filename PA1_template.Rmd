@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 output: 
-  html_document:
+  html_document: 
     keep_md: true
 ---
 
@@ -35,7 +35,7 @@ day.data <- group_by(all.data, date) %>%
 ```
 
 A histogram of daily step totals is generated from **day.data** 
-```{r Figure 1 - Histogram of daily step totals, warning=FALSE}
+```{r Fig1-HistogramDailyStep, warning=FALSE}
 qplot(daystep, data = day.data, 
       ylab = "Frequency", 
       xlab = "Number of steps", 
@@ -60,7 +60,7 @@ int.data <- group_by(all.data, interval) %>%
 ```
 
 The average steps per interval are plotted here:
-```{r Figure 2 - Daily Activity Pattern}
+```{r Fig2-DailyActivityPattern}
 qplot(interval, intstep, data = int.data, geom = "line",
       main = "Daily Activity Pattern", 
       xlab = "time (minutes)",
@@ -105,7 +105,7 @@ day.fill.data <- group_by(fill.data, date) %>%
 ```
 
 This data is plotted here:
-```{r Figure 3 - Histogram of daily step totals with clean dataframe}
+```{r Fig3-HistogramDailyStepClean}
 qplot(daystep, data = day.fill.data, 
       ylab = "Frequency", 
       xlab = "Number of steps", 
@@ -141,7 +141,7 @@ wk.plot <- mutate(wk.data, wktime = as.factor(wktime)) %>%
 ```
 
 Here is a panel plot of weekday and weekend activity patterns:
-```{r Figure 4 - Weekday and Weekend Activity Patterns}
+```{r Fig4-WeekdayWeekendActivityPatterns}
 qplot(interval, meanstep, data = wk.plot, facets = .~wktime, geom = "line",
       main = "Weekday and Weekend Activity Patterns", 
       xlab = "time (minutes)",

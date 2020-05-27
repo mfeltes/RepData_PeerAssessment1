@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 output: 
-  html_document:
+  html_document: 
     keep_md: true
 ---
 
@@ -47,7 +47,7 @@ qplot(daystep, data = day.data,
       bins = 20)
 ```
 
-![](PA1_template_files/figure-html/Figure 1 - Histogram of daily step totals-1.png)<!-- -->
+![](PA1_template_files/figure-html/Fig1-HistogramDailyStep-1.png)<!-- -->
 
 
 
@@ -76,7 +76,7 @@ qplot(interval, intstep, data = int.data, geom = "line",
       ylab = "steps (mean steps per interval)")
 ```
 
-![](PA1_template_files/figure-html/Figure 2 - Daily Activity Pattern-1.png)<!-- -->
+![](PA1_template_files/figure-html/Fig2-DailyActivityPattern-1.png)<!-- -->
 
 
 ```r
@@ -136,7 +136,7 @@ qplot(daystep, data = day.fill.data,
       bins = 20)
 ```
 
-![](PA1_template_files/figure-html/Figure 3 - Histogram of daily step totals with clean dataframe-1.png)<!-- -->
+![](PA1_template_files/figure-html/Fig3-HistogramDailyStepClean-1.png)<!-- -->
 
 
 
@@ -177,4 +177,4 @@ qplot(interval, meanstep, data = wk.plot, facets = .~wktime, geom = "line",
       ylab = "steps (mean steps / interval)")
 ```
 
-![](PA1_template_files/figure-html/Figure 4 - Weekday and Weekend Activity Patterns-1.png)<!-- -->
+![](PA1_template_files/figure-html/Fig4-WeekdayWeekendActivityPatterns-1.png)<!-- -->
