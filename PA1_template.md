@@ -55,7 +55,7 @@ qplot(daystep, data = day.data,
 mean1 <- format(mean(day.data$daystep, na.rm = TRUE), digits = 7)
 median1 <- format(median(day.data$daystep, na.rm = TRUE), digits = 7)
 ```
-The mean and median daily step totals are 10766.19 and 10765 steps respectively.
+The mean and median daily step totals are <span style="color: red;">10766.19</span> and <span style="color: red;">10765</span> steps respectively.
 
 ## What is the average daily activity pattern?
 The **all.data** dataframe is first grouped by the interval variable,
@@ -82,14 +82,14 @@ qplot(interval, intstep, data = int.data, geom = "line",
 ```r
 max <- int.data[int.data$intstep == max(int.data$intstep), ]
 ```
-Maximal average step count is 206.1698113 and is observed at 835 minutes
+Maximal average step count is <span style="color: red;">206.1698113</span> and is observed at <span style="color: red;">835</span> minutes
 
 ## Imputing missing values
 
 ```r
 missing <- sum(!complete.cases(all.data))
 ```
-**all.data** contains many missing values... in fact, 2304 rows are incomplete!
+**all.data** contains many missing values... in fact, <span style="color: red;">2304</span> rows are incomplete!
 
 Missing values occur exclusively in the steps column.
 
@@ -144,7 +144,7 @@ qplot(daystep, data = day.fill.data,
 mean2 <- format(mean(day.fill.data$daystep), digits = 7)
 median2 <- format(median(day.fill.data$daystep), digits = 7)
 ```
-The mean and median daily step totals are 10766.19 and 10766.19 steps respectively.
+The mean and median daily step totals are <span style="color: red;">10766.19</span> and <span style="color: red;">10766.19</span> steps respectively.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 From the NA-free **fill.data**, a new dataframe with a column for the day of the week (**dow**) is created, called **wk.data**.
